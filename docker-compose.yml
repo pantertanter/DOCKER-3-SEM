@@ -8,7 +8,7 @@ services:
     restart: unless-stopped 
     
     environment:
-      MYSQL_ROOT_PASSWORD: "MYSQL_SECRET_ROOT_PASSWORD"
+      MYSQL_ROOT_PASSWORD: "12345"
       TZ: "Europe/Copenhagen"
     ports:
       # <Port exposed> : < MySQL Port running inside container>
