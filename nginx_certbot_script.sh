@@ -8,10 +8,10 @@ upstream tomcat {
 }
 
 server {
-        root /var/www/html;
+        root /var/www/html/build/;
         index index.html index.htm index.nginx-debian.html;
 
-        server_name www.cphdat.dk edu.cphdat.dk;
+        server_name www.komputerkomputer.dk komputerkomputer.dk;
 
         location / {
                 # First attempt to serve request as file, then
@@ -30,12 +30,12 @@ server {
 }
 
 server {
-    if ($host = www.cphdat.dk) {
+    if ($host = www.komputerkomputer.dk) {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
 
-    if ($host = edu.cphdat.dk) {
+    if ($host = komputerkomputer.dk) {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
@@ -43,7 +43,7 @@ server {
         listen 80 default_server;
         listen [::]:80 default_server;
  
-        server_name www.cphdat.dk edu.cphdat.dk;
+        server_name www.komputerkomputer.dk komputerkomputer.dk;
     return 404; # managed by Certbot
 }
 EOF
